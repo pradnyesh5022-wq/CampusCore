@@ -21,14 +21,10 @@ export function FormSheet({ open, title, description, onClose, children, classNa
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') onClose();
     };
-
-    const timer = window.setTimeout(() => {
-      // dialogRef.current?.focus();
-    }, 0);
+
 
     document.addEventListener('keydown', handleKeyDown);
     return () => {
-      // window.clearTimeout(timer);
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [open, onClose]);
@@ -51,3 +47,4 @@ export function FormSheet({ open, title, description, onClose, children, classNa
     </div>
   );
 }
+
