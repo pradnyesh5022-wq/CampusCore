@@ -31,6 +31,7 @@ app.add_middleware(
         "http://localhost:5174",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
+        "https://campuscore-frontend-seven.vercel.app",
         "https://campuscore-frontend-qox55uv4x-pradnyesh5022-5486s-projects.vercel.app",
     ],
     allow_credentials=True,
@@ -58,4 +59,5 @@ app.include_router(faculty_dashboard_router)
 @app.get("/")
 def home():
     return {"message": "CampusCore API is running"}
+
 
